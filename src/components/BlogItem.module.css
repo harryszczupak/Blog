@@ -1,0 +1,24 @@
+.item h1 {
+	margin: 10px;
+	font-size: 40px;
+}
+.item span,
+p,
+a {
+	margin: 10px;
+}
+.item a {
+	color: #66c2ff;
+}
+.item span {
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 65px;
+}
+.item a:hover,
+.item h1:hover {
+	text-decoration: underline;
+}
+.item:hover {
+	cursor: pointer;
+}

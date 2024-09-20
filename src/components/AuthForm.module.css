@@ -1,0 +1,112 @@
+.Authform {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	height: 600px;
+	padding: 50px;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+}
+.inuptsArea {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+}
+.inuptsArea input {
+	background-color: #d9dede;
+	padding: 15px;
+	border: none;
+	font-size: 15px;
+	color: black;
+	width: 90%;
+}
+.titlefield {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.titlefield label {
+	color: black;
+	font-weight: bold;
+	text-align: start;
+	width: 95%;
+}
+.desc input {
+	color: black;
+	border: none;
+	background-color: #d9dede;
+	width: 90%;
+	font-size: 20px;
+	padding: 15px;
+}
+.desc {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+}
+label {
+	padding: 5px;
+}
+.desc label {
+	color: black;
+	font-weight: bold;
+	width: 95%;
+	text-align: start;
+}
+.email {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+}
+.email input {
+	color: black;
+	border: none;
+	background-color: #d9dede;
+	width: 90%;
+	font-size: 20px;
+	padding: 15px;
+}
+.email label {
+	color: black;
+	font-weight: bold;
+	width: 95%;
+	text-align: start;
+}
+.buttons {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+	align-items: center;
+}
+.buttons a {
+	padding: 10px;
+	width: 100px;
+}
+
+.buttons button {
+	border-radius: 0;
+	background-color: #66c2ff;
+}
+input.invalid {
+	background-color: #fa7777;
+	border: 2px solid #fd0808;
+}
+button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}

@@ -1,0 +1,28 @@
+.list {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	flex-direction: column;
+	list-style-type: none;
+}
+.list section {
+	padding: 20px;
+	width: 45%;
+}
+.list section p {
+	font-size: 20px;
+}
+.list li {
+	margin: 20px;
+	width: 100%;
+	padding: 20px;
+	border: 1px solid white;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.list a {
+	width: 45%;
+}

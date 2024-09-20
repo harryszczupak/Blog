@@ -1,0 +1,97 @@
+.form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	height: 600px;
+	padding: 50px;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+}
+.inuptsArea {
+	display: flex;
+	flex-direction: column;
+	height: 80%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.inuptsArea input {
+	background-color: #d9dede;
+	padding: 15px;
+	border: none;
+	font-size: 15px;
+	color: black;
+	width: 90%;
+}
+.titlefield {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.titlefield label {
+	color: black;
+	font-weight: bold;
+	text-align: start;
+	width: 95%;
+}
+.desc textarea {
+	color: black;
+	border: none;
+	background-color: #d9dede;
+	height: 80%;
+	width: 90%;
+	font-size: 20px;
+	padding: 15px;
+}
+.desc {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	height: 80%;
+}
+
+label {
+	padding: 5px;
+}
+.desc label {
+	font-weight: bold;
+	width: 95%;
+	text-align: start;
+}
+.buttonsArea {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	padding: 20px;
+}
+.buttonsArea button {
+	margin: 10px;
+	border-radius: 0;
+}
+
+@keyframes example {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+.error {
+	background-color: #fa7777;
+	border: 2px solid #fd0808;
+	animation: example 500ms ease-in-out forwards;
+	color: 'black';
+	padding: 5px;
+}
