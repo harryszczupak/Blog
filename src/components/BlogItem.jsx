@@ -9,7 +9,6 @@ const BlogItem = ({ items }) => {
 				<h1>{items.title}</h1>
 				<p>{items.dateData}</p>
 				<span>{items.description}</span>
-				<a>Read more</a>
 			</li>
 		</Link>
 	);

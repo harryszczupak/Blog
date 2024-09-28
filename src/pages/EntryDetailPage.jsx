@@ -1,9 +1,16 @@
+import { useRouteLoaderData } from 'react-router-dom';
+import DetailList from '../components/DetailList';
+import { redirect } from 'react-router-dom';
 const EntryDetailPage = () => {
-	return <p>siema</p>;
+	const data = useRouteLoaderData('entries_loader');
+	return <DetailList data={data} />;
 };
 
-export async function loader({ params }) {
-	console.log(params);
-	return null;
+export async function action({ params }) {
+	const response = fetch(`http://localhost/blog_api/delete_entry.php`, {
+		method: 'POST',
+		body: params.entryId,
+	});
+	return redirect('/blog');
 }
 export default EntryDetailPage;

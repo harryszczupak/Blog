@@ -1,17 +1,14 @@
 import classes from './BlogForm.module.css';
 
-
 import { Form } from 'react-router-dom';
 const BlogForm = () => {
-	
-
 	return (
 		<Form method='post' className={classes.form}>
 			<h1
 				style={{
-					color: 'black',
-					textAlign: 'start',
-					width: '95%',
+					color: '#999',
+					textAlign: 'center',
+					width: '100%',
 					margin: '10px',
 				}}>
 				React Blog
@@ -19,17 +16,11 @@ const BlogForm = () => {
 			<div className={classes.inuptsArea}>
 				<div className={classes.titlefield}>
 					<label>Title</label>
-					<input
-						
-						type='text'
-						placeholder='Title...'
-						name='title'></input>
-					
+					<input type='text' name='title'></input>
 				</div>
 				<div className={classes.desc}>
-					<label style={{ color: 'black' }}>Description</label>
-					<textarea  name='description'></textarea>
-				
+					<label>Description</label>
+					<textarea name='description'></textarea>
 				</div>
 			</div>
 

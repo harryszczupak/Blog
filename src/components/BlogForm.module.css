@@ -5,12 +5,16 @@
 	transform: translate(-50%, -50%);
 	display: flex;
 	flex-direction: column;
-	width: 600px;
-	height: 600px;
+	width: 400px;
+	height: 500px;
 	padding: 50px;
 	align-items: center;
 	justify-content: space-between;
-	background-color: white;
+	background-color: transparent;
+	backdrop-filter: blur(100px);
+	border: 1px solid white;
+	box-shadow: 10px 20px 20px 0 rgba(0, 0, 0, 0.4),
+		-10px 20px 20px 0 rgba(0, 0, 0, 0.4), 0 -2px 20px 0 rgba(0, 0, 0, 0.5);
 }
 .inuptsArea {
 	display: flex;
@@ -20,36 +24,35 @@
 	justify-content: center;
 	align-items: center;
 }
+textarea:focus {
+	outline: none;
+}
 .inuptsArea input {
-	background-color: #d9dede;
+	color: white;
+	background-color: transparent;
 	padding: 15px;
 	border: none;
 	font-size: 15px;
-	color: black;
-	width: 90%;
+	width: 100%;
+	border-bottom: 2px solid #999;
+	box-sizing: border-box;
 }
 .titlefield {
-	margin: 20px;
+	margin: 40px;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	justify-content: center;
-	align-items: center;
 }
-.titlefield label {
-	color: black;
-	font-weight: bold;
-	text-align: start;
-	width: 95%;
-}
+
 .desc textarea {
-	color: black;
+	color: white;
 	border: none;
-	background-color: #d9dede;
+	background-color: transparent;
 	height: 80%;
 	width: 90%;
 	font-size: 20px;
 	padding: 15px;
+	border-bottom: 2px solid #999;
 }
 .desc {
 	display: flex;
@@ -58,16 +61,17 @@
 	justify-content: center;
 	align-items: center;
 	height: 80%;
+	margin: 20px;
 }
 
-label {
+.inuptsArea label {
 	padding: 5px;
-}
-.desc label {
+	color: #999;
 	font-weight: bold;
-	width: 95%;
+	width: 100%;
 	text-align: start;
 }
+
 .buttonsArea {
 	width: 100%;
 	display: flex;

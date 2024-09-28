@@ -12,7 +12,8 @@ import { loader as Secure_Path_loader } from './pages/BlogFormPage';
 import { loader as Entries_loader } from './pages/BlogEntries';
 import BlogEntries from './pages/BlogEntries';
 import EntryDetailPage from './pages/EntryDetailPage';
-import { loader as Detail_loader } from './pages/EntryDetailPage';
+import { action as Detail_action } from './pages/EntryDetailPage';
+import AccountPage from './pages/AccountPage';
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -38,13 +39,19 @@ const router = createBrowserRouter([
 			},
 			{ path: 'logout', action: Logout_action },
 			{
+				path: 'acc',
+				element: <AccountPage />,
+			},
+			{
 				path: 'blog',
+				loader: Entries_loader,
+				id: 'entries_loader',
 				children: [
-					{ index: true, element: <BlogEntries />, loader: Entries_loader },
+					{ index: true, element: <BlogEntries /> },
 					{
 						path: ':entryId',
 						element: <EntryDetailPage />,
-						loader: Detail_loader,
+						action: Detail_action,
 					},
 				],
 			},

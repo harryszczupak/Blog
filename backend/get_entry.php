@@ -22,7 +22,10 @@ switch($method)
 {
     case "GET";
    
-    $sql = "SELECT * from entries";
+   
+  $sql = "SELECT name, entries.id, entries.title,entries.description,entries.date,entries.user_id
+FROM users
+INNER JOIN entries ON users.id = entries.user_id";
 
     $result = mysqli_query($conn,$sql);
   
@@ -31,7 +34,8 @@ switch($method)
         while($row = mysqli_fetch_assoc($result)) {
            
             $response= array("id" => $row['id'],"title" => $row['title'],
-        "description" => $row['description'],"dateData" => $row['date']);
+        "description" => $row['description'],"dateData" => $row['date'], "userName" => $row["name"],
+    "userName" => $row["name"], "userId" => $row["user_id"] );
         array_push($arr,$response);
       
         };

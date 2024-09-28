@@ -3,6 +3,7 @@ import classes from './MainNav.module.css';
 import { Link, NavLink } from 'react-router-dom';
 import { useRouteLoaderData } from 'react-router-dom';
 import { Form } from 'react-router-dom';
+import { FaRegCircleUser } from 'react-icons/fa6';
 const MainNav = () => {
 	const token = useRouteLoaderData('root');
 	return (
@@ -16,6 +17,10 @@ const MainNav = () => {
 				</section>
 				<input placeholder='Search'></input>
 				<ul>
+					<NavLink to='acc'>
+						<FaRegCircleUser />
+					</NavLink>
+
 					{!token && (
 						<NavLink
 							to={'auth?mode=login'}

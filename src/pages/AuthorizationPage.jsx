@@ -65,6 +65,7 @@ export async function action({ request }) {
 	const resData = await response.json();
 
 	if (resData.id) {
+		localStorage.setItem('user_info', JSON.stringify(resData));
 		document.cookie =
 			encodeURIComponent('id') +
 			'=' +

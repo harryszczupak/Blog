@@ -55,29 +55,30 @@ const AuthForm = () => {
 			<div className={classes.inuptsArea}>
 				<h1
 					style={{
-						color: 'black',
-						textAlign: 'start',
-						width: '95%',
+						color: '#999',
+						textAlign: 'center',
+						width: '100%',
 						margin: '10px',
 					}}>
 					{isLogged ? 'Log in' : 'Sign Up'}
 				</h1>
 				<div className={classes.titlefield}>
-					<label>username</label>
 					<input
 						type='text'
 						name='user'
+						id='user'
 						onBlur={(e) => {
 							handleBlur('user', e);
 						}}
 						onChange={handleChange}
 						className={userIsInvalid ? classes.invalid : ''}
 						value={inputsState.name}></input>
+					<label htmlFor='user'>username</label>
 				</div>
 				<div className={classes.desc}>
-					<label>password</label>
 					<input
 						type='password'
+						id='password'
 						name='password'
 						onBlur={(e) => {
 							handleBlur('password', e);
@@ -85,14 +86,15 @@ const AuthForm = () => {
 						onChange={handleChange}
 						className={passIsInvalid ? classes.invalid : ''}
 						value={inputsState.password}></input>
+					<label htmlFor='password'>password</label>
 					{data && JSON.parse(data).message && (
 						<p style={{ color: 'black' }}>{JSON.parse(data).message}</p>
 					)}
 				</div>
 				{!isLogged && (
 					<div className={classes.email}>
-						<label>email</label>
 						<input
+							id='email'
 							type='email'
 							name='email'
 							onBlur={(e) => {
@@ -101,6 +103,7 @@ const AuthForm = () => {
 							onChange={handleChange}
 							className={emailIsInvalid ? classes.invalid : ''}
 							value={inputsState.email}></input>
+						<label htmlFor='email'>email</label>
 					</div>
 				)}
 			</div>
